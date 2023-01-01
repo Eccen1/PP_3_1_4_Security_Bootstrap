@@ -67,6 +67,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public User getUserByName(String username) {
         Optional<User> user = Optional.ofNullable(userRepository.findByUsername(username));
         return user.orElse(null);

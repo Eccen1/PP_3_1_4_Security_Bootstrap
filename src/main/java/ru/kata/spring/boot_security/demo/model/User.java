@@ -39,7 +39,8 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> roles;
 
-    public User() {}
+    public User() {
+    }
 
     public void setUsername(String username) {
         this.username = username;

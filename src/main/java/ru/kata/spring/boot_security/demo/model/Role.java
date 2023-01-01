@@ -15,7 +15,8 @@ public class Role implements GrantedAuthority {
     @Column(name = "name")
     private String name;
 
-    public Role() {}
+    public Role() {
+    }
 
     public Role(String name) {
         this.name = name;
@@ -44,6 +45,9 @@ public class Role implements GrantedAuthority {
 
     @Override
     public String toString() {
-        return name;
+        if (name.contains("ROLE_USER")) {
+            return "USER";
+        }
+        return "ADMIN";
     }
 }
