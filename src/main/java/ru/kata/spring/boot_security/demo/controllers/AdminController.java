@@ -49,7 +49,7 @@ public class AdminController {
     public String editUser(@PathVariable("id") int id, Model model) {
         model.addAttribute("user", userService.getUser(id));
         model.addAttribute("roles", roleRepository.findAll());
-        return "admin/index";
+        return "admins/admin";
     }
 
     @PatchMapping("/{id}")
