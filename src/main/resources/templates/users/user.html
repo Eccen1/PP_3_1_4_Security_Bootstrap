@@ -30,10 +30,10 @@
 
 <!--/* Admin/User */-->
 <div class="row justify-content-between">
-    <div class="row ">
+    <div class="row">
         <div class="col-2">
-            <div class="p-3 ">
-                <nav class="nav nav-pills nav-justified flex-column ">
+            <div class="p-3">
+                <nav class="nav nav-pills nav-justified flex-column">
                     <a class="nav-link" aria-current="page" th:each="role : ${user.roles}"
                        th:if="${role.name=='ROLE_ADMIN'}" href="/admin">Admin</a>
                     <a class="nav-link active" href="/user">User</a>
@@ -70,14 +70,12 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr th:each="user : ${users}">
                                                 <td th:text="${user.getId()}"></td>
                                                 <td th:text="${user.getFirstname()}"></td>
                                                 <td th:text="${user.getLastname()}"></td>
                                                 <td th:text="${user.getAge()}"></td>
                                                 <td th:text="${user.getEmail()}"></td>
                                                 <td th:text="${user.getRoles()}"></td>
-                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
