@@ -25,7 +25,7 @@ public class AdminController {
 
     @GetMapping()
     public String getUserList(Model model, Principal principal) {
-        model.addAttribute("authUser", userService.getUserByName(principal.getName()));
+        model.addAttribute("authenticatedUser", userService.getUserByName(principal.getName()));
         model.addAttribute("users", userService.getUserList());
         model.addAttribute("create", new User());
         model.addAttribute("roles", roleRepository.findAll());

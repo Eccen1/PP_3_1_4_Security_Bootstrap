@@ -15,9 +15,9 @@
 <header class="d-flex flex-wrap justify-content-between align-items-stretch text-white py-2 bg-dark">
 <!--/* Email and role */-->
     <div class="fs-3 ps-4 me-1 d-inline-block">
-        <span class="fw-bolder" th:text="${authUser.email}"></span>
+        <span class="fw-bolder" th:text="${authenticatedUser.email}"></span>
         <span> with roles: </span>
-        <th:block th:each="role : ${authUser.roles}">
+        <th:block th:each="role : ${authenticatedUser.roles}">
             <span th:utext="${#strings.substringAfter(role.name, 'ROLE_')}"></span>
         </th:block>
     </div>
